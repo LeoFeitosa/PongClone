@@ -41,3 +41,9 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: Player
+    uniqueID: 4249556917
+    locked: 0
+  - name: Square
+    uniqueID: 4274864171
+    locked: 0
