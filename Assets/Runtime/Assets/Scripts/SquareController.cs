@@ -1,28 +1,43 @@
-using System.Collections;
-using System.Collections.Generic;
-using UnityEditor.Experimental.GraphView;
 using UnityEngine;
 
 public class SquareController : MonoBehaviour
 {
     [SerializeField] float speed = 1.5f;
-    Vector2 direction = Vector2.left;
+    Vector2 direction;
 
-    void Update()
+    void Start()
     {
-        Move();
+        InitialMove();
+    }
+
+    void InitialMove()
+    {
+        transform.position = Vector2.zero;
+
+        int dirX = Random.Range(-1, 2);
+        int dirY = Random.Range(-1, 2);
+        Debug.Log("dirX " + dirX);
+        Debug.Log("dirY " + dirY);
+
+        if (dirX == 0 || dirY == 0)
+        {
+            InitialMove();
+        }
+        else
+        {
+            direction = new Vector2(dirX, dirY);
+
+            Move();
+        }
     }
 
     void Move()
     {
-        transform.Translate(direction * Time.deltaTime * speed);
+        GetComponent<Rigidbody2D>().velocity = direction.normalized * speed;
     }
 
-    void OnTriggerEnter2D(Collider2D other)
+    void OnBecameInvisible()
     {
-        if (other.CompareTag("Player"))
-        {
-            direction *= -1;
-        }
+        InitialMove();
     }
 }

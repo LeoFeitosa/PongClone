@@ -1,15 +1,21 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayersInputController : MonoBehaviour
 {
     [SerializeField] float speed = 5;
+    [SerializeField] float limitMove = 5;
+    Vector2 movement = Vector2.zero;
+    Rigidbody2D rb2D;
     public enum Player
     {
         Player1, Player2
     };
     public Player playerType;
+
+    void Start()
+    {
+        rb2D = GetComponent<Rigidbody2D>();
+    }
 
     void Update()
     {
@@ -49,6 +55,8 @@ public class PlayersInputController : MonoBehaviour
 
     void Direction(int vertical)
     {
-        transform.Translate((Vector2.up * vertical) * Time.deltaTime * speed);
+        movement += (Vector2.up * vertical) * speed * Time.deltaTime;
+        movement.y = Mathf.Clamp(movement.y, -limitMove, limitMove);
+        rb2D.MovePosition(movement);
     }
 }
