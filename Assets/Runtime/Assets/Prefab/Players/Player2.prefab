@@ -8,6 +8,10 @@ PrefabInstance:
     m_TransformParent: {fileID: 0}
     m_Modifications:
     - target: {fileID: -3139596475562286489, guid: e9f2b3ccfd46c0646b47fd38dff08fcf, type: 3}
+      propertyPath: speed
+      value: 7
+      objectReference: {fileID: 0}
+    - target: {fileID: -3139596475562286489, guid: e9f2b3ccfd46c0646b47fd38dff08fcf, type: 3}
       propertyPath: limitMove
       value: 4.5
       objectReference: {fileID: 0}
@@ -29,7 +33,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342778, guid: e9f2b3ccfd46c0646b47fd38dff08fcf, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 8
+      value: 7
       objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342778, guid: e9f2b3ccfd46c0646b47fd38dff08fcf, type: 3}
       propertyPath: m_LocalPosition.y

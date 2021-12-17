@@ -1,3 +1,4 @@
+using System.Collections;
 using UnityEngine;
 
 public class SquareController : MonoBehaviour
@@ -7,21 +8,25 @@ public class SquareController : MonoBehaviour
 
     void Start()
     {
-        InitialMove();
+        StartCoroutine(InitialMove());
     }
 
-    void InitialMove()
+    IEnumerator InitialMove()
+    {
+        yield return new WaitForSeconds(2);
+        RandomDirection();
+    }
+
+    void RandomDirection()
     {
         transform.position = Vector2.zero;
 
         int dirX = Random.Range(-1, 2);
         int dirY = Random.Range(-1, 2);
-        Debug.Log("dirX " + dirX);
-        Debug.Log("dirY " + dirY);
 
         if (dirX == 0 || dirY == 0)
         {
-            InitialMove();
+            RandomDirection();
         }
         else
         {
@@ -38,6 +43,6 @@ public class SquareController : MonoBehaviour
 
     void OnBecameInvisible()
     {
-        InitialMove();
+        StartCoroutine(InitialMove());
     }
 }
