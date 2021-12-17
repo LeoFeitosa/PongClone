@@ -5,9 +5,11 @@ public class SquareController : MonoBehaviour
 {
     [SerializeField] float speed = 1.5f;
     Vector2 direction;
+    ScoreController score;
 
     void Start()
     {
+        score = FindObjectOfType<ScoreController>();
         StartCoroutine(InitialMove());
     }
 
@@ -43,6 +45,7 @@ public class SquareController : MonoBehaviour
 
     void OnBecameInvisible()
     {
+        score.SetScore((transform.position.x < 0) ? 2 : 1);
         StartCoroutine(InitialMove());
     }
 }
