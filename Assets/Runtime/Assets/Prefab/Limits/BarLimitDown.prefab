@@ -7,6 +7,18 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 0}
     m_Modifications:
+    - target: {fileID: 226760440174417707, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
+      propertyPath: m_BodyType
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 226760440174417707, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
+      propertyPath: m_Interpolate
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 226760440174417707, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
+      propertyPath: m_CollisionDetection
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342773, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
       propertyPath: m_Name
       value: BarLimitDown
@@ -25,7 +37,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342778, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
       propertyPath: m_LocalPosition.y
-      value: 0
+      value: -5.1
       objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342778, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
       propertyPath: m_LocalPosition.z
@@ -37,15 +49,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342778, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
       propertyPath: m_LocalRotation.x
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342778, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
       propertyPath: m_LocalRotation.y
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342778, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
       propertyPath: m_LocalRotation.z
-      value: 0
+      value: -0
       objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342778, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
