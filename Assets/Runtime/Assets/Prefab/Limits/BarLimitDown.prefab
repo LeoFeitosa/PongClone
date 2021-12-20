@@ -23,6 +23,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: BarLimitDown
       objectReference: {fileID: 0}
+    - target: {fileID: 8202076335716342773, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
+      propertyPath: m_TagString
+      value: CollisionUpDown
+      objectReference: {fileID: 0}
     - target: {fileID: 8202076335716342778, guid: 1129bb04620fc6e43895bd49b69cd84d, type: 3}
       propertyPath: m_RootOrder
       value: 0

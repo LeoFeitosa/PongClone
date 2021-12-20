@@ -39,6 +39,10 @@ public class PlayersInputController : MonoBehaviour
         {
             Direction(-1);
         }
+        else
+        {
+            Direction(0);
+        }
     }
 
     void InputPlayer2()
@@ -50,6 +54,10 @@ public class PlayersInputController : MonoBehaviour
         if (Input.GetKey(KeyCode.DownArrow))
         {
             Direction(-1);
+        }
+        else
+        {
+            Direction(0);
         }
     }
 
