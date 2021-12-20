@@ -98,7 +98,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2dbe7d259783750479c3ab0ab130fa69, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 7
+  speed: 7.5
+  collisionPlayerSound: {fileID: 8300000, guid: f4ee8abe4c7bb364db7e2c5a986ffc69, type: 3}
+  collisionUpDownSound: {fileID: 8300000, guid: 31889edc93896824ebb682e79a28bdba, type: 3}
+  scoreSound: {fileID: 8300000, guid: c45a338ce0fe8654faa2d18e30237008, type: 3}
 --- !u!61 &7754981847836724975
 BoxCollider2D:
   m_ObjectHideFlags: 0

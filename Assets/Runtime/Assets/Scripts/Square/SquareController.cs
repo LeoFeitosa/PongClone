@@ -4,6 +4,9 @@ using UnityEngine;
 public class SquareController : MonoBehaviour
 {
     [SerializeField] float speed = 1.5f;
+    [SerializeField] AudioClip collisionPlayerSound;
+    [SerializeField] AudioClip collisionUpDownSound;
+    [SerializeField] AudioClip scoreSound;
     Vector2 direction;
     ScoreController score;
 
@@ -45,7 +48,21 @@ public class SquareController : MonoBehaviour
 
     void OnBecameInvisible()
     {
+        AudioController.Instance.PlayAudioCue(scoreSound);
         score.SetScore((transform.position.x < 0) ? 2 : 1);
         StartCoroutine(InitialMove());
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.CompareTag("Player"))
+        {
+            AudioController.Instance.PlayAudioCue(collisionPlayerSound);
+        }
+
+        else if (collision.gameObject.CompareTag("CollisionUpDown"))
+        {
+            AudioController.Instance.PlayAudioCue(collisionUpDownSound);
+        }
     }
 }
