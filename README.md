@@ -1,5 +1,5 @@
 
-# Infinite Spaceship War
+# Pong Clone
 
 Este jogo é um clone do PONG de Atari, foi desenvolvido com Unity3D para ser jogado em um PC.
 ## Screenshots
